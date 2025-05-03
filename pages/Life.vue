@@ -5,7 +5,7 @@
       
       <div class="flex flex-col items-center justify-center bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl shadow-2xl p-8 w-full max-w-5xl mb-12 border-2 border-white border-opacity-20">
         <h1 class="text-6xl font-extrabold text-white mb-6 text-center tracking-tight">
-          <span class="text-yellow-400">Student Life</span>
+          <span class="text-amber-500">Student Life</span>
         </h1>
         <p class="text-xl text-white text-center max-w-3xl">
           A vibrant daily rhythm of learning, laughter, and lasting friendships
@@ -100,12 +100,7 @@ watch(selectedStudent, () => {
   }
 })
 
-definePageMeta({
-  auth: {
-    unauthenticatedOnly: false,
-    navigateAuthenticatedTo: '/Protected'
-  },
-})
+
 </script>
 
 <style scoped>

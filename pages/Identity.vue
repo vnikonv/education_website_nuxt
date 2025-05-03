@@ -4,7 +4,7 @@
     <div class="flex flex-col items-center justify-center min-h-screen bg-black bg-opacity-40">
       
       <div class="flex flex-col items-center justify-center bg-white bg-opacity-20 backdrop-blur-md rounded-2xl shadow-xl p-8 w-full max-w-4xl mx-4 my-10">
-        <h1 class="text-6xl font-bold text-white mb-6">Identity</h1>
+        <h1 class="text-6xl font-bold text-amber-500 mb-6">Identity</h1>
         <p class="text-xl text-white text-center">Who we are, what we believe, and how we grow together</p>
       </div>
 
