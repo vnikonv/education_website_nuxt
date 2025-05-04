@@ -1,16 +1,16 @@
 <template>
   <main class="min-h-screen bg-no-repeat bg-cover bg-fixed bg-center" style="background-image: url('/images/admission.jpg');">
-    <div class="flex flex-col items-center justify-center min-h-screen bg-black bg-opacity-50 px-4 py-10">
+    <div class="flex flex-col items-center justify-center min-h-screen px-4 py-10">
       
       
-      <div class="flex flex-col items-center justify-center bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl shadow-2xl p-8 w-full max-w-5xl mb-12 border-2 border-white border-opacity-20">
+      <div class="flex flex-col items-center justify-center rounded-3xl p-8 w-full max-w-5xl mb-12">
         <h1 class="text-6xl font-extrabold text-white mb-6 text-center tracking-tight">
-          <span class="text-yellow-500">So you want to apply...</span>
+          <span class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-300 mb-6 p-3 rounded-2xl">So you want to apply...</span>
         </h1>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl mb-12">
-        <div class="bg-white bg-opacity-15 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-white border-opacity-20">
+        <div class="p-8 bg-yellow-400 bg-opacity-70 rounded-xl px-3 py-3 hover:scale-105 duration-500 transition">
         <h2 class="text-3xl font-bold text-white mb-6 pb-2">Your Advantages as Our Student</h2>
         <p class="text-white mb-4">
       At Bumblebee Academy, you gain access to a global network of mentors, tailored academic support, and immersive cultural programmes.
@@ -20,7 +20,7 @@
       Whether you aim to study abroad, improve your language proficiency, or deepen your academic focus, our holistic approach ensures you are empowered to succeed.
         </p>
         </div>
-        <div class="bg-white bg-opacity-15 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-white border-opacity-20">
+        <div class="p-8 bg-yellow-400 bg-opacity-70 rounded-xl px-3 py-3 hover:scale-105 duration-500 transition">
         <h2 class="text-3xl font-bold text-white mb-6 pb-2">Admission Requirements</h2>
         <ul class="text-white space-y-3 list-disc pl-5">
           <li><span class="font-semibold">Academic Records:</span> Strong performance in core subjects, especially English and Mathematics</li>
@@ -33,40 +33,40 @@
       </div>
 
       
-      <div class="overflow-y-auto flex flex-col items-center bg-white bg-opacity-10 backdrop-blur-md rounded-2xl shadow-xl p-8 w-[1200px] max-w-[90vw] border-2 border-white border-opacity-30">
-        <h2 class="text-3xl font-bold text-white mb-6 text-center">ENROLL INTO <span class="text-yellow-600">The Bumblebee Academy</span></h2>
-        <h2 class="text-2xl font-bold text-white mb-6 text-center"><span class="text-yellow-600">California's most esteemed institution</span></h2>
+      <div class="overflow-y-auto flex flex-col items-center rounded-2xl p-8 w-[1200px] max-w-[90vw]">
+        <h2 class="text-3xl font-bold text-white mb-6 text-center bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-300 p-3 rounded-2xl">ENROLL INTO <span class="text-black">The Bumblebee Academy</span></h2>
+        <h2 class="text-2xl font-bold text-white mb-6 text-center"><span class="bg-amber-500 rounded-2xl p-3">California's most esteemed institution</span></h2>
         
         <form class="flex flex-col gap-4 w-full max-w-2xl" @submit.prevent="postData">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="flex flex-col gap-2">
               <label for="name" class="text-white font-medium">Name:</label>
-              <input class="border-2 border-gray-400 rounded-lg p-2 bg-white bg-opacity-70 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
+              <input class="border-2 border-gray-400 rounded-lg p-2 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
                      name="name" type="text" placeholder="Student Name" v-model="postname" required />
             </div>
             <div class="flex flex-col gap-2">
               <label for="Course" class="text-white font-medium">Course:</label>
-              <input class="border-2 border-gray-400 rounded-lg p-2 bg-white bg-opacity-70 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
+              <input class="border-2 border-gray-400 rounded-lg p-2 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
                      name="Course" type="text" placeholder="Course" v-model="postcourse" required />
             </div>
             <div class="flex flex-col gap-2">
               <label for="Scholarship" class="text-white font-medium">Id:</label>
-              <input class="border-2 border-gray-400 rounded-lg p-2 bg-white bg-opacity-70 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
+              <input class="border-2 border-gray-400 rounded-lg p-2 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
                      name="Scholarship" type="number" placeholder="Id" v-model="postid" required />
             </div>
             <div class="flex flex-col gap-2">
               <label for="games" class="text-white font-medium">Age:</label>
-              <input class="border-2 border-gray-400 rounded-lg p-2 bg-white bg-opacity-70 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
+              <input class="border-2 border-gray-400 rounded-lg p-2 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
                      name="games" type="number" placeholder="Age" v-model="postage" required />
             </div>
             <div class="flex flex-col gap-2">
               <label for="home" class="text-white font-medium">Rating:</label>
-              <input class="border-2 border-gray-400 rounded-lg p-2 bg-white bg-opacity-70 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
+              <input class="border-2 border-gray-400 rounded-lg p-2 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
                      name="home" type="number" placeholder="Rating" v-model="postrating">
             </div>
             <div class="flex flex-col gap-2">
               <label for="bat" class="text-white font-medium">Scholarship:</label>
-              <input class="h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-yellow-400" 
+              <input class="h-5 w-5 text-black border-gray-300 rounded focus:ring-yellow-400" 
                      name="bat" type="checkbox" v-model="postscholarship">
             </div>
           </div>
@@ -79,9 +79,9 @@
           <div class="flex flex-col gap-2">
             <label for="name" class="text-white font-medium">Search Students:</label>
             <div class="flex gap-2">
-              <input class="border-2 border-gray-400 rounded-lg p-2 bg-white bg-opacity-70 flex-grow focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
+              <input class="border-2 border-gray-400 rounded-lg p-2 flex-grow focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400" 
                      name="name" type="text" placeholder="Search by name" v-model="getname" />
-              <button class="w-[100px] bg-yellow-400 hover:bg-yellow-500 text-white font-medium rounded-lg transition duration-300" 
+              <button class="w-[100px] bg-yellow-400 hover:scale-105 text-white font-medium rounded-lg transition duration-300" 
                       type="submit">SEARCH</button>
             </div>
           </div>
@@ -89,20 +89,20 @@
       
         
         <div class="w-full overflow-x-auto mt-8">
-          <table class="w-full bg-white bg-opacity-20 backdrop-blur-sm rounded-lg overflow-hidden">
-            <thead>
-              <tr class="bg-gray-700 bg-opacity-90 text-white">
-                <th class="px-4 py-3 text-left">ID</th>
-                <th class="px-4 py-3 text-left">Name</th>
-                <th class="px-4 py-3 text-left">Age</th>
-                <th class="px-4 py-3 text-left">Course</th>
-                <th class="px-4 py-3 text-left">Rating</th>
-                <th class="px-4 py-3 text-left">Scholarship</th>
-                <th class="px-4 py-3 text-left">Edit</th>
+          <table class="w-full rounded-lg overflow-hidden bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-300">
+            <thead class="bg-gradient-to-r bg-black">
+              <tr class="bg-gradient-to-r bg-black text-white">
+                <th class="px-4 py-3 text-left bg-black">ID</th>
+                <th class="px-4 py-3 text-left bg-black">Name</th>
+                <th class="px-4 py-3 text-left bg-black">Age</th>
+                <th class="px-4 py-3 text-left bg-black">Course</th>
+                <th class="px-4 py-3 text-left bg-black">Rating</th>
+                <th class="px-4 py-3 text-left bg-black">Scholarship</th>
+                <th class="px-4 py-3 text-left bg-black">Edit</th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="student in data" :key="student.id" class="border-t border-white border-opacity-20 hover:bg-white hover:bg-opacity-10 transition duration-200">
+              <tr v-for="student in data" :key="student.id" class="border-t transition duration-200">
                 <td class="px-4 py-3 text-white">{{ student.id }}</td>
                 <td class="px-4 py-3 text-white">{{ student.name }}</td>
                 <td class="px-4 py-3 text-white">{{ student.age }}</td>
@@ -112,9 +112,9 @@
                 <td class="px-4 py-3">
                   <div class="flex gap-2">
                     <button @click="updateData(student.id)"
-                      class="bg-yellow-400 hover:bg-yellow-500 text-white font-medium py-1 px-3 rounded-lg transition duration-200">Edit</button>
+                      class="bg-black hover:scale-105 text-white font-medium py-1 px-3 rounded-lg transition duration-200">Edit</button>
                     <button @click="deleteData(student.id)"
-                      class="bg-amber-600 hover:bg-amber-700 text-white font-medium py-1 px-3 rounded-lg transition duration-200">Delete</button>
+                      class="bg-white hover:scale-105 text-black font-medium py-1 px-3 rounded-lg transition duration-200">Delete</button>
                   </div>
                 </td>
               </tr>
@@ -124,7 +124,7 @@
       
         
         <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50" v-show="modal">
-          <form @submit.prevent="putData" class="flex flex-col gap-4 p-6 bg-gray-800 rounded-lg w-[500px] max-w-[90vw] border-2 border-white border-opacity-30">
+          <form @submit.prevent="putData" class="flex flex-col gap-4 p-6 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-300 rounded-lg w-[500px] max-w-[90vw] border-2 border-white border-opacity-30">
             <h3 class="text-2xl font-bold text-white mb-4">Update student</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="flex flex-col gap-2">
@@ -157,7 +157,7 @@
               <button @click="modal = false" 
                       class="bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300" 
                       type="button">CANCEL</button>
-              <button class="bg-yellow-400 hover:bg-yellow-500 text-white font-medium py-2 px-4 rounded-lg transition duration-300" 
+              <button class="bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300" 
                       type="submit">UPDATE</button>
             </div>
           </form>

@@ -1,31 +1,31 @@
 <template>
   <main class="min-h-screen bg-no-repeat bg-cover bg-center bg-fixed" 
         style="background-image: url('/images/life.jpg');">
-    <div class="flex flex-col items-center justify-center min-h-screen bg-black bg-opacity-50 px-4 py-10">
+    <div class="flex flex-col items-center justify-center min-h-screen px-4 py-10">
       
-      <div class="flex flex-col items-center justify-center bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl shadow-2xl p-8 w-full max-w-5xl mb-12 border-2 border-white border-opacity-20">
+      <div class="flex flex-col items-center justify-center rounded-3xl p-8 w-full max-w-5xl mb-6">
         <h1 class="text-6xl font-extrabold text-white mb-6 text-center tracking-tight">
-          <span class="text-amber-500">Student Life</span>
+          <span class="text-white bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-300 p-3 rounded-2xl">Student Life</span>
         </h1>
-        <p class="text-xl text-white text-center max-w-3xl">
+        <p class="text-lg text-white text-center max-w-3xl mt-2 bg-yellow-400 bg-opacity-70 rounded-xl px-3 py-3">
           A vibrant daily rhythm of learning, laughter, and lasting friendships
         </p>
       </div>
 
       <div class="w-full max-w-4xl mb-16">
-        <h2 class="text-4xl font-bold text-white mb-8 text-center">Student Spotlight</h2>
+        <h2 class="text-4xl font-bold text-white mb-4 text-center">Student Spotlight</h2>
         
-        <div class="flex flex-col items-center gap-6 p-8 bg-white bg-opacity-15 backdrop-blur-md rounded-2xl shadow-xl border border-white border-opacity-20">
+        <div class="flex flex-col items-center gap-6 p-8">
           <div class="flex flex-wrap justify-center gap-4">
             <button
               v-for="student in students"
               :key="student.name"
               @click="selectedStudent = student.name"
               :class="[
-                'px-6 py-3 flex items-center justify-center border text-center transition-all rounded-xl',
+                'px-6 py-3 flex items-center justify-center text-center transition-all rounded-xl hexagon',
                 selectedStudent === student.name 
                   ? 'bg-yellow-500 text-white shadow-lg scale-105 border-yellow-600' 
-                  : 'bg-white bg-opacity-30 text-white border-white border-opacity-30 hover:bg-opacity-50'
+                  : 'bg-white bg-opacity-30 text-white hover:bg-opacity-50'
               ]"
             >
               {{ student.name }}
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl mb-12">
-        <div class="bg-white bg-opacity-15 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-white border-opacity-20">
+        <div class="text-white bg-yellow-400 bg-opacity-70 p-6 rounded-xl rounded-2xl p-8">
           <h2 class="text-3xl font-bold text-white mb-6 pb-2">Campus Vibrancy</h2>
           <p class="text-white mb-4">
             Life at Bumblebee Academy is rich with opportunity. From morning classes in sunlit studios to late-night study sessions under string lights, the campus buzzes with energy and purpose.
@@ -55,7 +55,7 @@
           </p>
         </div>
         
-        <div class="bg-white bg-opacity-15 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-white border-opacity-20">
+        <div class="text-white bg-yellow-400 bg-opacity-70 p-6 rounded-xl">
           <h2 class="text-3xl font-bold text-white mb-6 pb-2">Community Traditions</h2>
           <p class="text-white">
             Bumblebee traditions are crafted by students, for students:
