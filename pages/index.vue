@@ -89,16 +89,16 @@
             </div>
 
             <div
-                v-if="filteredSport && showText"
+                v-if="filteredFaculty && showText"
                 class="mt-4 ml-4 flex flex-col sm:flex-row gap-6 items-center bg-amber-500 bg-opacity-90 backdrop-blur-md p-6 rounded-full shadow-lg border border-white border-opacity-30 max-w-xl text-center sm:text-left"
               >
-              <img :src="filteredSport.img" class="w-36 h-24 object-cover rounded-3xl border border-white border-opacity-20" />
+              <img :src="filteredFaculty.img" class="w-36 h-24 object-cover rounded-3xl border border-white border-opacity-20" />
               <div class="flex flex-col gap-1 text-white">
-                <p class="font-bold text-xl">{{ filteredSport.name }}</p>
-                <p>Year established: {{ filteredSport.year }}</p>
-                <p>Head: {{ filteredSport.director }}</p>
-                <p>Temperature at the Building: {{ getTemp(filteredSport.name) }} &deg;C</p>
-                <p>Wind speed: {{ getWind(filteredSport.name) }} m/sec</p>
+                <p class="font-bold text-xl">{{ filteredFaculty.name }}</p>
+                <p>Year established: {{ filteredFaculty.year }}</p>
+                <p>Head: {{ filteredFaculty.director }}</p>
+                <p>Temperature at the Building: {{ getTemp(filteredFaculty.name) }} &deg;C</p>
+                <p>Wind speed: {{ getWind(filteredFaculty.name) }} m/sec</p>
             </div>
           </div>
 
@@ -126,25 +126,25 @@ const showText = ref(false)
 const engStore = useEngStore()
 const selected = ref('')
 
-const filteredSport = computed(() => {
-  return engStore.eng.find(sport => sport.name === selected.value)
+const filteredFaculty = computed(() => {
+  return engStore.eng.find(faculty => faculty.name === selected.value)
 })
 
 const getTemp = (name: string): string => {
-  if (name === 'American Football') return engStore.temp_S1
-  if (name === 'Basketball') return engStore.temp_S2
-  if (name === 'Baseball') return engStore.temp_S3
-  if (name === 'Ice Hockey') return engStore.temp_GOD
-  if (name === 'Soccer') return engStore.temp_INT
+  if (name === 'Biology') return engStore.temp_S1
+  if (name === 'Journalism') return engStore.temp_S2
+  if (name === 'Liberal Arts') return engStore.temp_S3
+  if (name === 'Mathematics') return engStore.temp_GOD
+  if (name === 'Physics') return engStore.temp_INT
   return ''
 }
 
 const getWind = (name: string): string => {
-  if (name === 'American Football') return engStore.wind_S1
-  if (name === 'Basketball') return engStore.wind_S2
-  if (name === 'Baseball') return engStore.wind_S3
-  if (name === 'Ice Hockey') return engStore.wind_GOD
-  if (name === 'Soccer') return engStore.wind_INT
+  if (name === 'Biology') return engStore.wind_S1
+  if (name === 'Journalism') return engStore.wind_S2
+  if (name === 'Liberal Arts') return engStore.wind_S3
+  if (name === 'Mathematics') return engStore.wind_GOD
+  if (name === 'Physics') return engStore.wind_INT
   return ''
 }
 
