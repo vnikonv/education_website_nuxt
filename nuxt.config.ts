@@ -22,9 +22,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       GITHUB_ID: process.env.GITHUB_ID,
-      GITHUB_SECRET: process.env.GITHUB_SECRET,
-      AUTH_ORIGIN: process.env.AUTH_ORIGIN,
-      AUTH_SECRET: process.env.AUTH_SECRET
+      GITHUB_SECRET: process.env.GITHUB_SECRET
     },
   },
   
