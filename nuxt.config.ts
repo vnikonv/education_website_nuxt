@@ -25,7 +25,8 @@ export default defineNuxtConfig({
     public: {
       GITHUB_ID: process.env.GITHUB_ID,
     },
-    GITHUB_SECRET: process.env.GITHUB_SECRET
+    GITHUB_SECRET: process.env.GITHUB_SECRET,
+    AUTH_SECRET: process.env.AUTH_SECRET
   },
   
 })
