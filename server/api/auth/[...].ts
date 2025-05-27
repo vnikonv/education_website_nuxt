@@ -9,7 +9,7 @@ export default NuxtAuthHandler({
         signIn: '/login',
     },
     providers: [
-        GithubProvider({
+        GithubProvider.default({
             clientId: runtimeConfig.public.GITHUB_ID,
             clientSecret: runtimeConfig.GITHUB_SECRET
         }),
