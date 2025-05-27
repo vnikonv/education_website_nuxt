@@ -1,6 +1,4 @@
-import {getServerSession} from '#auth'
-
-export default eventHandler(async event => {
-    const session = await getServerSession(event)
+export default eventHandler(async () => {
+    const session = await $fetch('/api/auth/session')
     return session
 })
