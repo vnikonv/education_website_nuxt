@@ -11,7 +11,7 @@ export default NuxtAuthHandler({
     providers: [
         GithubProvider({
             clientId: runtimeConfig.public.GITHUB_ID,
-            clientSecret: runtimeConfig.public.GITHUB_SECRET
+            clientSecret: runtimeConfig.GITHUB_SECRET
         }),
     ],
 })
