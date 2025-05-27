@@ -4,10 +4,10 @@ const prisma = new PrismaClient()
 
 export default defineEventHandler(async (event)=>  {
     const body = await readBody(event)
-    let doctor = null
+    let student = null
 
     if (body.id) {
-        doctor = await prisma.students.update({
+        student = await prisma.students.update({
             where: {
                 id: body.id
             },
