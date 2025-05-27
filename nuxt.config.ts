@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     },
   },
   auth: {
-    baseURL: process.env.AUTH_ORIGIN,
+    baseURL: process.env.AUTH_ORIGIN + '/api/auth',
     originEnvKey: 'AUTH_ORIGIN',
     globalAppMiddleware: true,
   },
