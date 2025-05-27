@@ -20,6 +20,9 @@ export default defineNuxtConfig({
     baseURL: process.env.AUTH_ORIGIN + '/api/auth',
     originEnvKey: 'AUTH_ORIGIN',
     globalAppMiddleware: true,
+    session: {
+      strategy: 'jwt'
+    }
   },
   runtimeConfig: {
     public: {
